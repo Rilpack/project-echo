@@ -1,5 +1,14 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './MainForm.module.scss'
+
+interface IMainForm {
+  setActiveModal: () => void;
+}
+
+interface IEmail {
+  email: string,
+  error: string | null
+}
 
 type Speakers = {
   none: "Не делить на спикеров",
@@ -15,9 +24,16 @@ type Languages = {
   english: "Английский "
 }
 
-export const MainForm = () => {
+export const MainForm = ({ setActiveModal }: IMainForm) => {
+  const [email, setEmail] = useState<IEmail>({
+    email: '',
+    error: null
+  });
   const [selectedSpeaker, setSelectedSpeaker] = useState<keyof Speakers>('none');
   const [selectedLanguages, setSelectedLanguages] = useState<keyof Languages>('russian');
+  const [viewError, setViewError] = useState<boolean>(false)
+
+  const isFormValid = email.email && !email.error;
 
   const speakers: Speakers = {
     none: "Не делить на спикеров",
@@ -33,6 +49,20 @@ export const MainForm = () => {
     english: "Английский "
   };
 
+  const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    setEmail({ email: value, error: null });
+    const re =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+    if (!re.test(String(value).toLowerCase())) {
+      setEmail({ email: value, error: "Некорректный email" });
+    }
+  };
+
+  useEffect(() => {
+    setViewError(false);
+  }, [email.email])
+
   return (
     <div className={styles.title_form_container}>
 
@@ -43,12 +73,14 @@ export const MainForm = () => {
       <div className={styles.element_container}>
         <label htmlFor="TextEmail" className={styles.element_label}>Почта</label>
         <input
+          onChange={(e) => emailHandler(e)}
           className={styles.input_style}
           type="email"
           id="TextEmail"
           name="name"
           placeholder="example@mail.com"
         />
+        {viewError && <span className={styles.error_message}>{email.error}</span>}
       </div>
 
       <div className={styles.element_container}>
@@ -89,7 +121,7 @@ export const MainForm = () => {
 
       <p className={styles.text_style}>Нажимая кнопку "Отправить" вы соглашаетесь с <a style={{ color: '#2a83ff' }} href='/' target='_blank'>нашей политикой конфиденциальности</a></p>
 
-      <button className={styles.button_accept_style}>
+      <button onClick={isFormValid ? setActiveModal : () => setViewError(true)} className={styles.button_accept_style}>
         Отправить
       </button>
 

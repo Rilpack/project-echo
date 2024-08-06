@@ -71,3 +71,9 @@
 
   user-select: none;
 }
+
+.error_message {
+  @include p-text;
+  font-size: 14px;
+  color: $error-color;
+}

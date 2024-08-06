@@ -4,10 +4,15 @@ import { MainForm } from '../../components/Forms/MainForm/MainForm'
 import { ExampleForm } from '../../components/Forms/ExampleForm/ExampleForm'
 import { InfoBlock } from '../../components/InfoBlock/InfoBlock'
 import { FaqBlock } from '../../components/FaqBlock/FaqBlock'
+import { useState } from 'react'
+import { Modal } from '../../components/Modal/Modal'
 
 export const Home = () => {
+  const [activeModal, setActiveModal] = useState<boolean>(false);
+
   return (
     <div className={styles.block_page_container}>
+      {activeModal && <Modal onClose={() => setActiveModal(false)} />}
       <div className={styles.home_page_container}>
         <div className={styles.title_home_container}>
           <img style={{ width: 353, height: 400 }} src={logo_3d} />
@@ -17,7 +22,7 @@ export const Home = () => {
           </div>
         </div>
         <div className={styles.form_container}>
-          <MainForm />
+          <MainForm setActiveModal={() => setActiveModal(true)} />
           <div className={styles.form_example_container}>
             <h4 className={styles.title_home_text_span}>Пример расшифровки</h4>
             <ExampleForm />
