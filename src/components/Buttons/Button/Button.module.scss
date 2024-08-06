@@ -1,0 +1,10 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.button {
+  @include button;
+  font-size: 18px;
+  font-weight: 600;
+}

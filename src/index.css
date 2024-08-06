@@ -1,0 +1,16 @@
+:root {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+
+  background-color: #000a0e;
+  color: #f7f7f7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+}

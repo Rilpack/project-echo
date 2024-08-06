@@ -1,0 +1,20 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.h2_style {
+  font-size: 32px;
+  margin-bottom: 32px;
+
+  user-select: none;
+}
+
+.container_questions_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 24px;
+}

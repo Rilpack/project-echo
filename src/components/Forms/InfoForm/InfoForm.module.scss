@@ -1,0 +1,39 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.container_info {
+  @include container_window_or_form_column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  user-select: none;
+}
+
+.container_info:hover {
+  box-shadow: 0 10px 15px #03ff684b;
+  transform: translateY(-5px);
+}
+
+.container_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+}
+
+.b_style {
+  @include b-text;
+  text-align: center;
+  font-size: 24px;
+}
+
+.p_style {
+  @include p_text;
+  text-align: center;
+  font-size: 16px;
+}

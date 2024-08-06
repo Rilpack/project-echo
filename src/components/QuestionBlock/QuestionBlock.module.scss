@@ -1,0 +1,35 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.container_question {
+  @include container_window_or_form_column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  width: 100%;
+  max-width: 850px;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.container_question:hover {
+  box-shadow: 0 10px 15px #03ff684b;
+  transform: translateY(-5px);
+}
+
+.wrapper_title_question {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 18px;
+
+  width: 100%;
+}
+
+.b_title {
+  @include b-text;
+}

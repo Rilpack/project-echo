@@ -1,0 +1,71 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/texts';
+
+.home_page_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+}
+
+.title_home_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  padding: 32px 0px 0px;
+
+  user-select: none;
+}
+
+.title_home_text_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.title_home_text {
+  font-size: 60px;
+  color: $title-color;
+  font-family: 'TravelsNext', sans-serif;
+  line-height: 75px;
+  font-style: normal;
+}
+
+.title_home_text_span {
+  @include title-form;
+  font-size: 22px;
+
+  user-select: none;
+}
+
+.title_home_text_p {
+  @include p-text;
+  font-size: 32px;
+  line-height: 45px;
+  color: $subtitle-color;
+}
+
+.form_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 24px;
+  width: 100%;
+}
+
+.form_example_container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}

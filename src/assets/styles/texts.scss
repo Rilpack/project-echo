@@ -1,0 +1,34 @@
+@import '@/assets/styles/_variables';
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.logo_text {
+  font-size: 32px;
+  color: $title-color;
+  font-family: 'TravelsNext', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+// MIXINS
+
+@mixin p-text {
+  color: $subtitle-color;
+  font-size: 12px;
+}
+
+@mixin b-text {
+  color: $text-b-color;
+  font-size: 24px;
+}
+
+@mixin title-form {
+  color: $form-text;
+  font-size: 18px;
+}

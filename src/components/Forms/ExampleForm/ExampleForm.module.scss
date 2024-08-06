@@ -1,0 +1,24 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.example_form_container {
+  @include container_window_or_form_column;
+  width: 520px;
+  gap: 6px;
+
+  user-select: none;
+}
+
+.example_title {
+  @include title-form;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.example_text {
+  @include p-text;
+  font-size: 16px;
+  font-weight: 200;
+}
