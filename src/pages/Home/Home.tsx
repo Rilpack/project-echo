@@ -1,10 +1,11 @@
+import { useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import styles from './Home.module.scss'
 import logo_3d from '../../assets/images/png/3d-logo.png'
 import { MainForm } from '../../components/Forms/MainForm/MainForm'
 import { ExampleForm } from '../../components/Forms/ExampleForm/ExampleForm'
 import { InfoBlock } from '../../components/InfoBlock/InfoBlock'
 import { FaqBlock } from '../../components/FaqBlock/FaqBlock'
-import { useState } from 'react'
 import { Modal } from '../../components/Modal/Modal'
 
 export const Home = () => {
@@ -12,7 +13,19 @@ export const Home = () => {
 
   return (
     <div className={styles.block_page_container}>
-      {activeModal && <Modal onClose={() => setActiveModal(false)} />}
+      <CSSTransition
+        in={activeModal}
+        classNames={{
+          enter: styles['modal-enter'],
+          enterActive: styles['modal-enter-active'],
+          exit: styles['modal-exit'],
+          exitActive: styles['modal-exit-active'],
+        }}
+        timeout={400}
+        unmountOnExit
+      >
+        <Modal onClose={() => setActiveModal(false)} />
+      </CSSTransition>
       <div className={styles.home_page_container}>
         <div className={styles.title_home_container}>
           <img style={{ width: 353, height: 400 }} src={logo_3d} />

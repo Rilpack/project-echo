@@ -33,7 +33,7 @@ export const MainForm = ({ setActiveModal }: IMainForm) => {
   const [selectedLanguages, setSelectedLanguages] = useState<keyof Languages>('russian');
   const [viewError, setViewError] = useState<boolean>(false)
 
-  const isFormValid = email.email && !email.error;
+  const isFormValid = email.email.length > 0 && !email.error;
 
   const speakers: Speakers = {
     none: "Не делить на спикеров",

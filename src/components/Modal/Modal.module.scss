@@ -17,8 +17,8 @@
 
 .container_modal {
   @include container_window_or_form_column;
-  width: 600px;
-  height: 600px;
+  width: 500px;
+  height: 500px;
   background-image: url('../../assets/images/png/background.png');
   background-size: cover;
 }
@@ -38,19 +38,19 @@
   flex-direction: column;
   width: 100%;
   height: 100%;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .title_modal {
   text-align: center;
   font-size: 28px;
   max-width: 500px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 }
 
 .logo_modal {
   animation: rotate 3s linear infinite;
-  margin-bottom: 90px;
+  margin-bottom: 65px;
 }
 
 @keyframes rotate {
