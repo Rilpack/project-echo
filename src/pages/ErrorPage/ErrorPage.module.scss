@@ -1,0 +1,17 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.h1_text {
+  font-size: 148px;
+  color: $title-color;
+  font-family: 'TravelsNext', sans-serif;
+}
+
+.p_text {
+  @include p-text;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
