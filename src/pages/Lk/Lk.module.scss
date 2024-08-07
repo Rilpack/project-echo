@@ -2,3 +2,21 @@
 @import '@/assets/styles/containers';
 @import '@/assets/styles/elements';
 @import '@/assets/styles/texts';
+
+.lk_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  height: 300px;
+  padding-top: 100px;
+}
+
+.wrapper_forms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}

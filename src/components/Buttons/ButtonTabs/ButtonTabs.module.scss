@@ -1,0 +1,50 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.tabs_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.wrapper_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+}
+
+.buttonTab_default,
+.buttonTab_active {
+  font-family: 'TravelsNext', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  background-color: $btn-default;
+  color: $btn-default-text;
+  padding: 12px;
+  width: 100%;
+  transition: 0.1s linear;
+  cursor: pointer;
+  user-select: none;
+
+  border-top: #000a0e;
+  border-left: #000a0e;
+  border-right: #000a0e;
+  border-image: linear-gradient(to right, #000a0e, #000a0e, #000a0e, #000a0e) 47% 0%;
+}
+
+.buttonTab_active {
+  border-image: linear-gradient(to right, #000a0e, #03ff67, #03ff67, #000a0e) 47% 0%;
+}
+
+.buttonTab_default:hover {
+  color: $btn-default-hover;
+}

@@ -1,0 +1,53 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.auth_form_container {
+  @include container_window_or_form_column;
+  width: 400px;
+}
+
+.element_container {
+  position: relative;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.element_label {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  background-color: $form-background;
+  padding-inline: 4px;
+  color: $input-placeholder-color;
+  font-size: 12px;
+
+  user-select: none;
+}
+
+.input_style {
+  @include input;
+  width: 100%;
+  background-color: $form-background;
+  padding: 10px 10px 10px 10px;
+}
+
+.input_style::placeholder {
+  color: $input-placeholder-color;
+}
+
+.button_style {
+  @include button;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.button_accept_style {
+  @include button-accept;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+}
