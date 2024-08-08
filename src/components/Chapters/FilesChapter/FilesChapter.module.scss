@@ -1,0 +1,33 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.container_files_chapter {
+  @include container_window_or_form_column;
+  width: 100%;
+}
+
+.wrapper_title_files_chapter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.headerText {
+  color: $table-header-text;
+  background-color: $form-background;
+  font-size: 16px;
+}
+
+.cellText {
+  color: $table-cell-text;
+  font-size: 14px;
+}
+
+.button_download {
+  @include button;
+  font-weight: 600;
+}

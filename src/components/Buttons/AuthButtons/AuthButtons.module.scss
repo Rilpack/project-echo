@@ -1,0 +1,27 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.container_btns_chapter {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wrapper_btn_chapter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+
+  cursor: pointer;
+}
+
+.btn_chapter {
+  @include button-chapter;
+  font-size: 18px;
+}

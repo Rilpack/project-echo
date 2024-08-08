@@ -5,12 +5,14 @@
 
 .lk_container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
   gap: 8px;
-  height: 300px;
   padding-top: 35px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
 }
 
 .wrapper_forms {
@@ -19,4 +21,27 @@
   justify-content: center;
   flex-direction: row;
   gap: 8px;
+}
+
+.wrapper_lk {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  gap: 8px;
+}
+
+.line {
+  width: 1px;
+  border: 1px solid $container-border;
+  height: 300px;
+  margin-inline: 50px;
+}
+
+.h2_text {
+  font-size: 26px;
+  margin-bottom: 24px;
 }

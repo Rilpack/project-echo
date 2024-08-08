@@ -1,11 +1,7 @@
 import { BrowserRouter } from 'react-router-dom'
 import { createContext, useState } from 'react';
 import Router from './routes/sections'
-
-interface IUser {
-  name: string,
-  email: string,
-}
+import { IUser } from './interfaces/user';
 
 interface ModalContextType {
   user: IUser | null;
@@ -16,8 +12,8 @@ export const ModalContext = createContext<ModalContextType | null>(null);
 
 function App() {
   const [user, setUser] = useState<IUser | null>(
-    null
-    // { name: "Владимир", email: "email@gmail.com" }
+    // null
+    { name: "Владимир", email: "email@gmail.com" }
   );
 
   return (

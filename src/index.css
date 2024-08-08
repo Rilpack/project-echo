@@ -27,3 +27,16 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   border: none;
 }
+
+.css-levciy-MuiTablePagination-displayedRows {
+  color: #f7f7f7;
+  font-family: 'Manrope' !important;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  color: #f7f7f7;
+}
+
+.css-rbjqkq-MuiDataGrid-root {
+  font-family: 'Manrope' !important;
+}

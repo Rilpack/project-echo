@@ -1,6 +1,17 @@
+import { useContext } from 'react';
 import styles from './AuthForm.module.scss'
+import { ModalContext } from '../../../App';
 
 export const AuthForm = () => {
+  // Context
+  const context = useContext(ModalContext);
+  if (!context) {
+    throw new Error('ModalContext must be used within a ModalProvider');
+  }
+  // Context
+
+  const { setUser } = context;
+
   return (
     <div className={styles.auth_form_container}>
       <div className={styles.element_container}>
