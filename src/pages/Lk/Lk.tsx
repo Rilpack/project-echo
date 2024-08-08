@@ -39,7 +39,6 @@ export const Lk = () => {
           <h2 className={styles.h2_text}>{user.email}</h2>
           <div className={styles.wrapper_lk}>
             <AuthButtons setChapter={setChapter} />
-            <div className={styles.line} />
             <ChapterForm chapter={chapter} />
           </div>
         </div>
