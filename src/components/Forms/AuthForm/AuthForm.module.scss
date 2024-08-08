@@ -33,10 +33,6 @@
   padding: 10px 10px 10px 10px;
 }
 
-.input_style::placeholder {
-  color: $input-placeholder-color;
-}
-
 .button_style {
   @include button;
   font-size: 16px;

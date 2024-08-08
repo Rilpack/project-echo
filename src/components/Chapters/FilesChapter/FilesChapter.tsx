@@ -71,8 +71,8 @@ export const FilesChapter = () => {
   return (
     <div className={styles.container_files_chapter}>
       <div className={styles.wrapper_title_files_chapter}>
-        <h2>Мои файлы</h2>
-        <Button onClick={() => undefined} text="Загрузить файл" />
+        <h3>Мои файлы</h3>
+        <button className={styles.btn_open_form}>Загрузить файл</button>
       </div>
       <DataGrid
         disableColumnMenu

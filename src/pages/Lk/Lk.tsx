@@ -6,7 +6,7 @@ import { ButtonTabs } from '../../components/Buttons/ButtonTabs/ButtonTabs'
 import { ModalContext } from '../../App'
 import { AuthButtons } from '../../components/Buttons/AuthButtons/AuthButtons'
 import { Chapters } from '../../interfaces/chapter'
-import { ChapterForm } from '../../components/Forms/ChapterForm/ChapterForm'
+import { ChaptersForm } from '../../components/Forms/ChaptersForm/ChaptersForm'
 
 export const Lk = () => {
   // Context
@@ -39,7 +39,7 @@ export const Lk = () => {
           <h2 className={styles.h2_text}>{user.email}</h2>
           <div className={styles.wrapper_lk}>
             <AuthButtons setChapter={setChapter} />
-            <ChapterForm chapter={chapter} />
+            <ChaptersForm chapter={chapter} />
           </div>
         </div>
       }

@@ -53,10 +53,6 @@
   padding: 10px 10px 10px 10px;
 }
 
-.input_style::placeholder {
-  color: $input-placeholder-color;
-}
-
 .select_style {
   @include select;
   width: 100%;

@@ -1,0 +1,32 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.container_help_chapter {
+  @include container_window_or_form_column;
+  width: 100%;
+}
+
+.wrapper_help_btns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.help_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.p_text {
+  @include p-text;
+  font-size: 16px;
+}

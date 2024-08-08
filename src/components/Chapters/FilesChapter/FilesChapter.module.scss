@@ -10,7 +10,7 @@
 
 .wrapper_title_files_chapter {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
   width: 100%;
@@ -30,4 +30,10 @@
 .button_download {
   @include button;
   font-weight: 600;
+}
+
+.btn_open_form {
+  @include button;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
