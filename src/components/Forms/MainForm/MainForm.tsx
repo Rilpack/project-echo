@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './MainForm.module.scss'
 
 interface IMainForm {
@@ -32,7 +32,9 @@ export const MainForm = ({ setActiveModal }: IMainForm) => {
   const [selectedSpeaker, setSelectedSpeaker] = useState<keyof Speakers>('none');
   const [selectedLanguages, setSelectedLanguages] = useState<keyof Languages>('russian');
   const [viewError, setViewError] = useState<boolean>(false)
+  const [selectedFile, setSelectedFile] = useState<File | null>(null);
 
+  const fileInputRef = useRef<HTMLInputElement>(null);
   const isFormValid = email.email.length > 0 && !email.error;
 
   const speakers: Speakers = {
@@ -63,12 +65,31 @@ export const MainForm = ({ setActiveModal }: IMainForm) => {
     setViewError(false);
   }, [email.email])
 
+  const handleFileUpload = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setSelectedFile(e.target.files[0]);
+    }
+  };
+
   return (
     <div className={styles.title_form_container}>
 
-      <button className={styles.button_style}>
+      <input
+        type="file"
+        ref={fileInputRef}
+        style={{ display: 'none' }}
+        onChange={handleFileChange}
+      />
+
+      <button className={styles.button_style} onClick={handleFileUpload}>
         Загрузить файл
       </button>
+
+      {selectedFile && <p>Выбранный файл: {selectedFile.name}</p>}
 
       <div className={styles.element_container}>
         <label htmlFor="TextEmail" className={styles.element_label}>Почта</label>

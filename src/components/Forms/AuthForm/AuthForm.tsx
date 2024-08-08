@@ -32,7 +32,7 @@ export const AuthForm = () => {
           placeholder='Введите пароль'
         />
       </div>
-      <button className={styles.button_style}>Войти</button>
+      <button onClick={() => setUser({ name: "Владимир", email: "example@gmail.com" })} className={styles.button_style}>Войти</button>
     </div>
   )
 }

@@ -23,7 +23,7 @@ export const Lk = () => {
   return (
     <div className={styles.block_page_container}>
       {
-        user === null && <div style={{ height: 300 }} className={styles.lk_container}>
+        user === null && <div style={{ height: 300 }} className={styles.lk_container_auth}>
           <ButtonTabs form={form} setForm={setForm} />
           <div className={styles.wrapper_forms}>
             {

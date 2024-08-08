@@ -11,10 +11,7 @@ interface ModalContextType {
 export const ModalContext = createContext<ModalContextType | null>(null);
 
 function App() {
-  const [user, setUser] = useState<IUser | null>(
-    // null
-    { name: "Владимир", email: "email@gmail.com" }
-  );
+  const [user, setUser] = useState<IUser | null>(null);
 
   return (
     <BrowserRouter>

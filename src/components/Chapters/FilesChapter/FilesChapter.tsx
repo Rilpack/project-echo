@@ -1,7 +1,6 @@
 import { DataGrid, GridColDef } from "@mui/x-data-grid"
 import { ruRU } from '@mui/x-data-grid/locales';
 import styles from "./FilesChapter.module.scss"
-import { Button } from "../../Buttons/Button/Button";
 import { rows } from "../../../config/exampleRows";
 
 export const FilesChapter = () => {
