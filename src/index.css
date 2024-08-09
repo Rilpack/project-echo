@@ -14,6 +14,7 @@ body {
   margin: 0;
 }
 
+/* Изменённый стиль скролла */
 body::-webkit-scrollbar {
   width: 6px;
 }
@@ -27,7 +28,9 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;
   border: none;
 }
+/* Изменённый стиль скролла */
 
+/* Отключенный стили таблицы */
 .css-levciy-MuiTablePagination-displayedRows {
   color: #f7f7f7;
   font-family: 'Manrope' !important;
@@ -39,4 +42,24 @@ body::-webkit-scrollbar-thumb {
 
 .css-rbjqkq-MuiDataGrid-root {
   font-family: 'Manrope' !important;
+  border: 1px solid #03ff67 !important;
 }
+
+.css-rbjqkq-MuiDataGrid-root {
+  --DataGrid-rowBorderColor: #03ff67 !important;
+}
+
+.css-wop1k0-MuiDataGrid-footerContainer {
+  border: none !important;
+}
+
+.css-rbjqkq-MuiDataGrid-root .MuiDataGrid-columnHeader:focus-within,
+.css-rbjqkq-MuiDataGrid-root .MuiDataGrid-cell:focus-within {
+  outline: none !important;
+}
+
+.css-rbjqkq-MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+.css-rbjqkq-MuiDataGrid-root .MuiDataGrid-cell:focus {
+  outline: none !important;
+}
+/* Отключенный стили таблицы */

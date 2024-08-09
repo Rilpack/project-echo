@@ -15,6 +15,8 @@
   flex-direction: column;
   width: 100%;
   gap: 10px;
+
+  user-select: none;
 }
 
 .help_btn {
@@ -24,6 +26,10 @@
   flex-direction: row;
   gap: 6px;
   text-decoration: none;
+}
+
+.h3_text {
+  user-select: none;
 }
 
 .p_text {

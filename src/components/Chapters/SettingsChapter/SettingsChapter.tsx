@@ -7,7 +7,7 @@ export const SettingsChapter = () => {
     <div className={styles.container_settings_chapter}>
 
       <div className={styles.wrapper_row}>
-        <h3>Настройка спикеров</h3>
+        <h3 className={styles.h3_text}>Настройка спикеров</h3>
 
         {
           inputs.map((input, index) => (
@@ -29,7 +29,7 @@ export const SettingsChapter = () => {
       </div>
 
       <div className={styles.wrapper_row}>
-        <h3>Смена пароля</h3>
+        <h3 className={styles.h3_text}>Смена пароля</h3>
         <div className={styles.input_container}>
           <label htmlFor="ChangePasswordNew" className={styles.input_label}>Новый пароль</label>
           <input

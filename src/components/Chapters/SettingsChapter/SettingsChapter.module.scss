@@ -37,6 +37,10 @@
   user-select: none;
 }
 
+.h3_text {
+  user-select: none;
+}
+
 .input_style {
   @include input;
   width: 100%;

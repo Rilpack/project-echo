@@ -27,6 +27,10 @@
   font-size: 14px;
 }
 
+.h3_text {
+  user-select: none;
+}
+
 .button_download {
   @include button;
   font-weight: 600;

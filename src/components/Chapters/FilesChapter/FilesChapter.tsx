@@ -74,12 +74,10 @@ export const FilesChapter = ({ showModal }: IFilesChapter) => {
   return (
     <div className={styles.container_files_chapter}>
       <div className={styles.wrapper_title_files_chapter}>
-        <h3>Мои файлы</h3>
+        <h3 className={styles.h3_text}>Мои файлы</h3>
         <button onClick={showModal} className={styles.btn_open_form}>Загрузить файл</button>
       </div>
       <DataGrid
-        disableColumnMenu
-        disableColumnResize={true}
         autoPageSize
         localeText={ruRU.components.MuiDataGrid.defaultProps.localeText}
         style={{ width: '100%' }}
@@ -95,8 +93,11 @@ export const FilesChapter = ({ showModal }: IFilesChapter) => {
         disableRowSelectionOnClick
         disableColumnSelector
         disableDensitySelector
+        disableColumnMenu
+        disableColumnResize={true}
         rowSelection={false}
-        showCellVerticalBorder={true}
+        showColumnVerticalBorder={false}
+        showCellVerticalBorder={false}
       />
     </div>
   )
