@@ -19,6 +19,7 @@ export const Lk = () => {
   const { user } = context;
   const [form, setForm] = useState<"auth" | "reg">("auth");
   const [chapter, setChapter] = useState<Chapters | undefined>(Chapters.Files);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   return (
     <div className={styles.block_page_container}>
@@ -39,7 +40,7 @@ export const Lk = () => {
           <h2 className={styles.h2_text}>{user.email}</h2>
           <div className={styles.wrapper_lk}>
             <AuthButtons setChapter={setChapter} />
-            <ChaptersForm chapter={chapter} />
+            <ChaptersForm chapter={chapter} showModal={() => setShowModal(true)} />
           </div>
         </div>
       }

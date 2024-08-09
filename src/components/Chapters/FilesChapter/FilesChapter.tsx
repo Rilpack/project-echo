@@ -3,7 +3,11 @@ import { ruRU } from '@mui/x-data-grid/locales';
 import styles from "./FilesChapter.module.scss"
 import { rows } from "../../../config/exampleRows";
 
-export const FilesChapter = () => {
+interface IFilesChapter {
+  showModal: () => void
+}
+
+export const FilesChapter = ({ showModal }: IFilesChapter) => {
 
   const columns: GridColDef[] = [
     {
@@ -71,7 +75,7 @@ export const FilesChapter = () => {
     <div className={styles.container_files_chapter}>
       <div className={styles.wrapper_title_files_chapter}>
         <h3>Мои файлы</h3>
-        <button className={styles.btn_open_form}>Загрузить файл</button>
+        <button onClick={showModal} className={styles.btn_open_form}>Загрузить файл</button>
       </div>
       <DataGrid
         disableColumnMenu

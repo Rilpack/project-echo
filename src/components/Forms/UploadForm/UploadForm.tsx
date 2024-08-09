@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
-import styles from './MainForm.module.scss'
+import styles from './UploadForm.module.scss'
 
-interface IMainForm {
+interface IUploadForm {
   setActiveModal: () => void;
 }
 
@@ -24,7 +24,7 @@ type Languages = {
   english: "Английский "
 }
 
-export const MainForm = ({ setActiveModal }: IMainForm) => {
+export const UploadForm = ({ setActiveModal }: IUploadForm) => {
   const [email, setEmail] = useState<IEmail>({
     email: '',
     error: null

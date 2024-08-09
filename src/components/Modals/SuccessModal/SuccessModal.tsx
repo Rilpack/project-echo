@@ -1,12 +1,12 @@
-import styles from './Modal.module.scss'
-import close from '../../assets/images/svg/close.svg'
-import logo from '../../assets/images/svg/logo.svg'
+import styles from './SuccessModal.module.scss'
+import close from '../../../assets/images/svg/close.svg'
+import logo from '../../../assets/images/svg/logo.svg'
 
-interface IModal {
+interface ISuccessModal {
   onClose: () => void
 }
 
-export const Modal = ({ onClose }: IModal) => {
+export const SuccessModal = ({ onClose }: ISuccessModal) => {
   return (
     <div className={styles.wrapper_modal}>
       <div className={styles.container_modal}>

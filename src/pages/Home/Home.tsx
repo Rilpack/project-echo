@@ -2,11 +2,11 @@ import { useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import styles from './Home.module.scss'
 import logo_3d from '../../assets/images/png/3d-logo.png'
-import { MainForm } from '../../components/Forms/MainForm/MainForm'
+import { UploadForm } from '../../components/Forms/UploadForm/UploadForm'
 import { ExampleForm } from '../../components/Forms/ExampleForm/ExampleForm'
 import { InfoBlock } from '../../components/InfoBlock/InfoBlock'
 import { FaqBlock } from '../../components/FaqBlock/FaqBlock'
-import { Modal } from '../../components/Modal/Modal'
+import { SuccessModal } from '../../components/Modals/SuccessModal/SuccessModal'
 
 export const Home = () => {
   const [activeModal, setActiveModal] = useState<boolean>(false);
@@ -24,7 +24,7 @@ export const Home = () => {
         timeout={400}
         unmountOnExit
       >
-        <Modal onClose={() => setActiveModal(false)} />
+        <SuccessModal onClose={() => setActiveModal(false)} />
       </CSSTransition>
       <div className={styles.home_page_container}>
         <div className={styles.title_home_container}>
@@ -35,7 +35,7 @@ export const Home = () => {
           </div>
         </div>
         <div className={styles.form_container}>
-          <MainForm setActiveModal={() => setActiveModal(true)} />
+          <UploadForm setActiveModal={() => setActiveModal(true)} />
           <div className={styles.form_example_container}>
             <h4 className={styles.title_home_text_span}>Пример расшифровки</h4>
             <ExampleForm />
