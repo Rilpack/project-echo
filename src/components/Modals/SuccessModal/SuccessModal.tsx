@@ -8,7 +8,7 @@ interface ISuccessModal {
 
 export const SuccessModal = ({ onClose }: ISuccessModal) => {
   return (
-    <div className={styles.wrapper_modal}>
+    <div className={styles.wrapper_success_modal}>
       <div className={styles.container_modal}>
         <div className={styles.wrapper_close}>
           <img onClick={onClose} style={{ width: 25, cursor: 'pointer' }} src={close} />

@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './UploadForm.module.scss'
+import { Speakers } from '../../../interfaces/speakers';
+import { Languages } from '../../../interfaces/languages';
 
 interface IUploadForm {
   setActiveModal: () => void;
@@ -8,20 +10,6 @@ interface IUploadForm {
 interface IEmail {
   email: string,
   error: string | null
-}
-
-type Speakers = {
-  none: "Не делить на спикеров",
-  one: "Один спикер",
-  two: "Два спикера",
-  three: "Три спикера",
-  four: "Четыре спикера",
-  five: "Пять спикеров"
-}
-
-type Languages = {
-  russian: "Русский",
-  english: "Английский "
 }
 
 export const UploadForm = ({ setActiveModal }: IUploadForm) => {
@@ -48,7 +36,7 @@ export const UploadForm = ({ setActiveModal }: IUploadForm) => {
 
   const languages: Languages = {
     russian: "Русский",
-    english: "Английский "
+    english: "Английский"
   };
 
   const emailHandler = (e: React.ChangeEvent<HTMLInputElement>) => {

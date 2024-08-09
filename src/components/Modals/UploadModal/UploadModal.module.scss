@@ -1,0 +1,95 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.wrapper_upload_modal {
+  @include wrapper_modal;
+}
+
+.container_modal {
+  @include container_window_or_form_column;
+  width: 500px;
+  padding: 0;
+  gap: 0px;
+}
+
+.header_modal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  border-bottom: 1px solid $container-border;
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  user-select: none;
+}
+
+.h3_text {
+  padding-left: 16px;
+}
+
+.img_close {
+  width: 20px;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+.wrapper_content_modal {
+  display: flex;
+  width: 100%;
+  gap: 8px;
+  flex: 1;
+}
+
+.content_modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  padding: 14px;
+  gap: 6px;
+}
+
+.element_container {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.element_label {
+  position: absolute;
+  top: -9px;
+  left: 10px;
+  background-color: $form-background;
+  padding-inline: 4px;
+  color: $input-placeholder-color;
+  font-size: 12px;
+
+  user-select: none;
+}
+
+.button_style {
+  @include button;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.button_accept_style {
+  @include button-accept;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.select_style {
+  @include select;
+  width: 100%;
+  background-color: $form-background;
+  padding: 10px 10px 10px 10px;
+}

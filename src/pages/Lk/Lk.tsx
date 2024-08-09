@@ -1,4 +1,5 @@
 import { useContext, useState } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import styles from './Lk.module.scss'
 import { AuthForm } from '../../components/Forms/AuthForm/AuthForm'
 import { RegForm } from '../../components/Forms/RegForm/RegForm'
@@ -7,6 +8,7 @@ import { ModalContext } from '../../App'
 import { AuthButtons } from '../../components/Buttons/AuthButtons/AuthButtons'
 import { Chapters } from '../../interfaces/chapter'
 import { ChaptersForm } from '../../components/Forms/ChaptersForm/ChaptersForm'
+import { UploadModal } from '../../components/Modals/UploadModal/UploadModal'
 
 export const Lk = () => {
   // Context
@@ -23,6 +25,19 @@ export const Lk = () => {
 
   return (
     <div className={styles.block_page_container}>
+      <CSSTransition
+        in={showModal}
+        classNames={{
+          enter: styles['modal-enter'],
+          enterActive: styles['modal-enter-active'],
+          exit: styles['modal-exit'],
+          exitActive: styles['modal-exit-active'],
+        }}
+        timeout={400}
+        unmountOnExit
+      >
+        <UploadModal onClose={() => setShowModal(false)} />
+      </CSSTransition>
       {
         user === null && <div style={{ height: 300 }} className={styles.lk_container_auth}>
           <ButtonTabs form={form} setForm={setForm} />
