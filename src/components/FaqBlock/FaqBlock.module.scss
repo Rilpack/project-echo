@@ -18,3 +18,14 @@
   width: 100%;
   gap: 24px;
 }
+
+@media (max-width: 1024px) {
+  .h2_style {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .container_questions_block {
+    gap: 16px;
+  }
+}

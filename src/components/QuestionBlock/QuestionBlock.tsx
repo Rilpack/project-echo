@@ -12,12 +12,14 @@ export const QuestionBlock = ({ title, text, icon }: IQuestion) => {
 
   return (
     <div className={styles.container_question} onClick={() => setIsExpanded(!isExpanded)}>
-      <img style={{ width: 45 }} src={icon} />
-      <div className={styles.wrapper_title_question}>
-        <b className={styles.b_title}>{title}</b>
-        <p className={`${styles.p_text} ${isExpanded ? styles.expanded : ''}`}>
-          {text}
-        </p>
+      <div className={styles.wrapper_question}>
+        <img className={styles.img} src={icon} />
+        <div className={styles.wrapper_title_question}>
+          <b className={styles.b_title}>{title}</b>
+          <p className={`${styles.p_text} ${isExpanded ? styles.expanded : ''}`}>
+            {text}
+          </p>
+        </div>
       </div>
     </div>
   );

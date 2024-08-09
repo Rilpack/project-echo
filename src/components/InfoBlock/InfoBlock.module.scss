@@ -17,3 +17,14 @@
   width: 100%;
   gap: 16px;
 }
+
+@media (max-width: 1024px) {
+  .h2_style {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .container_info_forms {
+    gap: 12px;
+  }
+}

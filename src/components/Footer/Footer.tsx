@@ -29,7 +29,7 @@ export const Footer = () => {
           <h2 className={styles.h2_text} style={{ marginBottom: 12 }}>Компания</h2>
           <div className={styles.detail_wrapper_footer}>
             <a href='https://blackmesait.ru/' target='_blank'>
-              <img src={logo} />
+              <img className={styles.img_logo} src={logo} />
             </a>
           </div>
         </div>

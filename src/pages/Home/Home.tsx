@@ -28,16 +28,16 @@ export const Home = () => {
       </CSSTransition>
       <div className={styles.home_page_container}>
         <div className={styles.title_home_container}>
-          <img style={{ width: 353, height: 400 }} src={logo_3d} />
+          <img className={styles.img_home_container} src={logo_3d} />
           <div className={styles.title_home_text_container}>
             <h2 className={styles.title_home_text}>Расшифрую любые аудио и видео файлы в текст</h2>
             <p className={styles.title_home_text_p}>Разделю текст на спикеров, расставлю таймкоды и знаки препинания​</p>
           </div>
         </div>
-        <div className={styles.form_container}>
+        <div className={styles.wrapper_forms}>
           <UploadForm setActiveModal={() => setActiveModal(true)} />
           <div className={styles.form_example_container}>
-            <h4 className={styles.title_home_text_span}>Пример расшифровки</h4>
+            <span className={styles.title_home_text_span}>Пример расшифровки</span>
             <ExampleForm />
           </div>
         </div>

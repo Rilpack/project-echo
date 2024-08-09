@@ -99,3 +99,15 @@
   opacity: 0;
   transition: opacity 400ms;
 }
+
+@media (max-width: 1024px) {
+  .container_layout {
+    margin: 16px 28px 0px 28px;
+  }
+
+  .footer_layout {
+    height: 250px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+}

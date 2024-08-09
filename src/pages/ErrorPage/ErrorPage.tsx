@@ -1,6 +1,6 @@
-import { useNavigate } from 'react-router-dom';
-import { Button } from '../../components/Buttons/Button/Button'
 import styles from './ErrorPage.module.scss'
+import { useNavigate } from 'react-router-dom';
+
 
 export const ErrorPage = () => {
   const navigate = useNavigate();
@@ -9,7 +9,7 @@ export const ErrorPage = () => {
     <div className={styles.block_page_container}>
       <h1 className={styles.h1_text}>404</h1>
       <p className={styles.p_text}>Такой страницы не существует :с</p>
-      <Button onClick={() => navigate('/')} text='Вернуться на главную'></Button>
+      <button className={styles.button_style} onClick={() => navigate('/')} >Вернуться на главную</button>
     </div>
   )
 }

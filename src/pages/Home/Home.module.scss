@@ -31,19 +31,16 @@
   gap: 12px;
 }
 
+.img_home_container {
+  width: 353px;
+}
+
 .title_home_text {
   font-size: 60px;
   color: $title-color;
   font-family: 'TravelsNext', sans-serif;
   line-height: 75px;
   font-style: normal;
-}
-
-.title_home_text_span {
-  @include title-form;
-  font-size: 22px;
-
-  user-select: none;
 }
 
 .title_home_text_p {
@@ -53,7 +50,14 @@
   color: $subtitle-color;
 }
 
-.form_container {
+.title_home_text_span {
+  @include title-form;
+  font-size: 22px;
+
+  user-select: none;
+}
+
+.wrapper_forms {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -67,5 +71,49 @@
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+  max-width: 640px;
   gap: 6px;
+}
+
+@media (max-width: 1024px) {
+  .home_page_container {
+    gap: 16px;
+  }
+
+  .title_home_container {
+    gap: 16px;
+    padding: 24px 0px 24px;
+  }
+
+  .title_home_text_container {
+    gap: 6px;
+  }
+
+  .img_home_container {
+    width: 200px;
+  }
+
+  .title_home_text {
+    font-size: 42px;
+    line-height: 48px;
+  }
+
+  .title_home_text_p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .title_home_text_span {
+    font-size: 20px;
+  }
+
+  .wrapper_forms {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form_example_container {
+    max-width: 100%;
+    gap: 6px;
+  }
 }

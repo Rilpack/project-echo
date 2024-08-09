@@ -8,14 +8,6 @@ p {
   margin: 0;
 }
 
-.logo_text {
-  font-size: 32px;
-  color: $title-color;
-  font-family: 'TravelsNext', sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
 // MIXINS
 
 @mixin p-text {

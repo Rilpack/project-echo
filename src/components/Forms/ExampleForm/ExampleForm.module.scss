@@ -5,10 +5,20 @@
 
 .example_form_container {
   @include container_window_or_form_column;
-  width: 520px;
-  gap: 6px;
-
+  padding: 0px;
+  width: 100%;
   user-select: none;
+}
+
+.wrapper_container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 14px;
+  width: 100%;
+  gap: 6px;
 }
 
 .example_title {
@@ -21,4 +31,22 @@
   @include p-text;
   font-size: 16px;
   font-weight: 200;
+}
+
+@media (max-width: 1024px) {
+  .wrapper_container {
+    max-width: 100%;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .example_title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .example_text {
+    font-size: 14px;
+    font-weight: 200;
+  }
 }

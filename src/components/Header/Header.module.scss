@@ -3,11 +3,6 @@
 @import '@/assets/styles/elements';
 @import '@/assets/styles/texts';
 
-.logo {
-  width: 48px;
-  height: 58px;
-}
-
 .header_container {
   display: flex;
   align-items: center;
@@ -33,11 +28,23 @@
   transform: translateY(-2px);
 }
 
+.logo {
+  width: 48px;
+}
+
 .header_logo_blocK_text {
   display: flex;
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
+}
+
+.logo_text {
+  font-size: 32px;
+  color: $title-color;
+  font-family: 'TravelsNext', sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .header_block_btns_container {
@@ -58,4 +65,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.button_style {
+  @include button;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    width: 42px;
+  }
+
+  .logo_text {
+    font-size: 28px;
+  }
 }

@@ -17,13 +17,17 @@
   transform: translateY(-5px);
 }
 
-.container_img {
+.wrapper_container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 12px;
   padding: 24px;
+}
+
+.img {
+  width: 86px;
 }
 
 .b_style {
@@ -36,4 +40,23 @@
   @include p_text;
   text-align: center;
   font-size: 16px;
+}
+
+@media (max-width: 1024px) {
+  .wrapper_container {
+    gap: 4px;
+    padding: 8px;
+  }
+
+  .img {
+    width: 64px;
+  }
+
+  .b_style {
+    font-size: 20px;
+  }
+
+  .p_style {
+    font-size: 14px;
+  }
 }

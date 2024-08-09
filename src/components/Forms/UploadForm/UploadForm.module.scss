@@ -3,15 +3,21 @@
 @import '@/assets/styles/elements';
 @import '@/assets/styles/texts';
 
-.title_form_container {
+.form_container {
   @include container_window_or_form_column;
-  width: 600px;
+  padding: 0px;
+  min-width: 400px;
 }
 
-.captcha_form_container {
-  @include container_window_or_form_row;
-  align-items: center;
+.wrapper_form {
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
   justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 4px;
+  padding: 14px;
 }
 
 .element_container {
@@ -72,4 +78,10 @@
   @include p-text;
   font-size: 14px;
   color: $error-color;
+}
+
+@media (max-width: 1024px) {
+  .form_container {
+    width: 100%;
+  }
 }
