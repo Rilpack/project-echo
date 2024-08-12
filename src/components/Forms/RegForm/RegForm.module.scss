@@ -5,7 +5,9 @@
 
 .reg_form_container {
   @include container_window_or_form_column;
-  width: 400px;
+  width: 100%;
+  padding: 0;
+  border: none;
 }
 
 .element_container {

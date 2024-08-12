@@ -1,10 +1,20 @@
 import styles from './Header.module.scss'
 import logo from '../../assets/images/svg/logo.svg'
 import { useNavigate } from "react-router-dom";
+import { useContext } from 'react';
+import { ModalContext } from '../../App';
 
 export const Header = () => {
-  const navigate = useNavigate();
+  // Context
+  const context = useContext(ModalContext);
+  if (!context) {
+    throw new Error('ModalContext must be used within a ModalProvider');
+  }
+  // Context
 
+  const { user, setActiveModal } = context;
+
+  const navigate = useNavigate();
 
   return (
     <div className={styles.header_layout}>
@@ -16,7 +26,13 @@ export const Header = () => {
           </div>
         </div>
         <div className={styles.header_block_btn_lk}>
-          <button className={styles.button_style} onClick={() => navigate('/lk')}>Личный кабинет</button>
+          <button
+            className={styles.button_style}
+            onClick={user === null
+              ? () => setActiveModal("auth")
+              : () => navigate('/lk')}>
+            Личный кабинет
+          </button>
         </div>
       </div>
     </div>

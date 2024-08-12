@@ -1,4 +1,4 @@
-import { useState } from 'react'
+
 import { CSSTransition } from 'react-transition-group'
 import styles from './Home.module.scss'
 import logo_3d from '../../assets/images/png/3d-logo.png'
@@ -7,14 +7,37 @@ import { ExampleForm } from '../../components/Forms/ExampleForm/ExampleForm'
 import { InfoBlock } from '../../components/InfoBlock/InfoBlock'
 import { FaqBlock } from '../../components/FaqBlock/FaqBlock'
 import { SuccessModal } from '../../components/Modals/SuccessModal/SuccessModal'
+import { AuthModal } from '../../components/Modals/AuthModal/AuthModal'
+import { useContext } from 'react'
+import { ModalContext } from '../../App'
 
 export const Home = () => {
-  const [activeModal, setActiveModal] = useState<boolean>(false);
+  // Context
+  const context = useContext(ModalContext);
+  if (!context) {
+    throw new Error('ModalContext must be used within a ModalProvider');
+  }
+  // Context
+
+  const { activeModal, setActiveModal } = context;
 
   return (
     <div className={styles.block_page_container}>
       <CSSTransition
-        in={activeModal}
+        in={activeModal === 'auth'}
+        classNames={{
+          enter: styles['modal-enter'],
+          enterActive: styles['modal-enter-active'],
+          exit: styles['modal-exit'],
+          exitActive: styles['modal-exit-active'],
+        }}
+        timeout={400}
+        unmountOnExit
+      >
+        <AuthModal onClose={() => setActiveModal(false)} />
+      </CSSTransition>
+      <CSSTransition
+        in={activeModal === 'success'}
         classNames={{
           enter: styles['modal-enter'],
           enterActive: styles['modal-enter-active'],
@@ -35,7 +58,7 @@ export const Home = () => {
           </div>
         </div>
         <div className={styles.wrapper_forms}>
-          <UploadForm setActiveModal={() => setActiveModal(true)} />
+          <UploadForm setActiveModal={() => setActiveModal("success")} />
           <div className={styles.form_example_container}>
             <span className={styles.title_home_text_span}>Пример расшифровки</span>
             <ExampleForm />

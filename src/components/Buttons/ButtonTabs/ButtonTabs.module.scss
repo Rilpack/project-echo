@@ -10,7 +10,6 @@
   flex-direction: row;
   gap: 12px;
   width: 100%;
-  margin-bottom: 8px;
 }
 
 .wrapper_button {
@@ -25,9 +24,9 @@
 .buttonTab_default,
 .buttonTab_active {
   font-family: 'TravelsNext', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 600;
-  background-color: $btn-default;
+  background-color: $form-background;
   color: $btn-default-text;
   padding: 12px;
   width: 100%;
@@ -35,14 +34,14 @@
   cursor: pointer;
   user-select: none;
 
-  border-top: #000a0e;
-  border-left: #000a0e;
-  border-right: #000a0e;
-  border-image: linear-gradient(to right, #000a0e, #000a0e, #000a0e, #000a0e) 47% 0%;
+  border-top: #01161e;
+  border-left: #01161e;
+  border-right: #01161e;
+  border-image: linear-gradient(to right, #01161e, #01161e, #01161e, #01161e) 47% 0%;
 }
 
 .buttonTab_active {
-  border-image: linear-gradient(to right, #000a0e, #03ff67, #03ff67, #000a0e) 47% 0%;
+  border-image: linear-gradient(to right, #01161e, #03ff67, #03ff67, #01161e) 47% 0%;
 }
 
 .buttonTab_default:hover {

@@ -1,0 +1,60 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.wrapper_auth_modal {
+  @include wrapper_modal;
+}
+
+.container_modal {
+  @include container_window_or_form_column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+}
+
+.wrapper_close {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.wrapper_close {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.logo_img {
+  width: 175px;
+  margin: 0 auto;
+}
+
+.close_img {
+  width: 20px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.wrapper_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wrapper_forms {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 8px;
+}
