@@ -60,3 +60,26 @@
     font-size: 14px;
   }
 }
+
+@media (max-width: 768px) {
+  .container_info:hover {
+    transform: translateY(0px);
+  }
+
+  .wrapper_container {
+    gap: 4px;
+    padding: 0px;
+  }
+
+  .img {
+    width: 46px;
+  }
+
+  .b_style {
+    font-size: 18px;
+  }
+
+  .p_style {
+    font-size: 14px;
+  }
+}

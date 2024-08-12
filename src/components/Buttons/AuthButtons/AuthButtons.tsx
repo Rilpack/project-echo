@@ -12,7 +12,7 @@ export const AuthButtons = ({ setChapter }: IAuthButtons) => {
     <div className={styles.container_btns_chapter}>
       {chapters.map((chapter, index) => (
         <div key={index} className={styles.wrapper_btn_chapter} onClick={!chapter.slug ? () => undefined : () => setChapter(chapter.slug)}>
-          <img style={{ width: 18 }} src={chapter.icon} />
+          <img className={styles.img_icon} src={chapter.icon} />
           <button className={styles.btn_chapter}>{chapter.title}</button>
         </div>
       ))}

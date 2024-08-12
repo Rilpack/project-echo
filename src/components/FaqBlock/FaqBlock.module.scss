@@ -26,6 +26,18 @@
   }
 
   .container_questions_block {
-    gap: 16px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h2_style {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  .container_questions_block {
+    gap: 8px;
   }
 }

@@ -85,3 +85,36 @@
     width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .form_container {
+    min-width: 100px;
+  }
+
+  .button_style {
+    font-size: 14px;
+  }
+
+  .button_accept_style {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+
+  .input_style {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .select_style {
+    padding: 8px;
+  }
+
+  .text_style {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .error_message {
+    font-size: 12px;
+  }
+}

@@ -1,5 +1,6 @@
 import styles from './Header.module.scss'
 import logo from '../../assets/images/svg/logo.svg'
+import profile from '../../assets/images/svg/user.svg'
 import { useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import { ModalContext } from '../../App';
@@ -32,6 +33,13 @@ export const Header = () => {
               ? () => setActiveModal("auth")
               : () => navigate('/lk')}>
             Личный кабинет
+          </button>
+          <button
+            className={styles.button_style_mobile}
+            onClick={user === null
+              ? () => setActiveModal("auth")
+              : () => navigate('/lk')}>
+            <img className={styles.img} src={profile} />
           </button>
         </div>
       </div>

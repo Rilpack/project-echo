@@ -57,6 +57,10 @@
   width: 245px;
 }
 
+.img_contact {
+  width: 22px;
+}
+
 .text,
 .text_bottom {
   color: #f7f7f7b0;
@@ -84,5 +88,39 @@
 
   .img_logo {
     width: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .h2_text {
+    font-size: 18px;
+    margin: 12px 0px;
+  }
+
+  .detail_wrapper_footer {
+    gap: 6px;
+  }
+
+  .img_logo {
+    width: 100px;
+  }
+
+  .img_contact {
+    width: 10px;
+  }
+
+  .text {
+    font-size: 12px;
+  }
+
+  .text_bottom {
+    font-size: 10px;
+    color: #f7f7f74b;
+  }
+}
+
+@media (max-width: 375px) {
+  .container_footer {
+    flex-direction: column;
   }
 }

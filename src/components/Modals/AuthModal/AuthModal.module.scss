@@ -58,3 +58,18 @@
   width: 100%;
   gap: 8px;
 }
+
+@media (max-width: 768px) {
+  .container_modal {
+    gap: 2px;
+    padding: 16px;
+  }
+
+  .logo_img {
+    width: 125px;
+  }
+
+  .wrapper_container {
+    gap: 8px;
+  }
+}

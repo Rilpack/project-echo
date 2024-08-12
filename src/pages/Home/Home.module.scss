@@ -118,3 +118,31 @@
     gap: 6px;
   }
 }
+
+@media (max-width: 768px) {
+  .img_home_container {
+    display: none;
+  }
+
+  .home_page_container {
+    gap: 12px;
+  }
+
+  .title_home_container {
+    padding: 16px 0px 0px 0px;
+  }
+
+  .title_home_text_container {
+    gap: 4px;
+  }
+
+  .title_home_text {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .title_home_text_p {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

@@ -49,3 +49,15 @@
   font-weight: 600;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .input_style {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .button_style {
+    font-size: 14px;
+    margin-top: 2px;
+  }
+}

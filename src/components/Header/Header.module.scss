@@ -74,6 +74,10 @@
   width: 100%;
 }
 
+.button_style_mobile {
+  display: none;
+}
+
 @media (max-width: 1024px) {
   .logo {
     width: 42px;
@@ -81,5 +85,31 @@
 
   .logo_text {
     font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 28px;
+  }
+
+  .logo_text {
+    font-size: 24px;
+  }
+
+  .button_style {
+    display: none;
+  }
+
+  .button_style_mobile {
+    @include button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    .img {
+      width: 24px;
+    }
   }
 }

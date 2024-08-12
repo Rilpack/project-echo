@@ -8,11 +8,11 @@ export const HelpChapter = () => {
       <h3 className={styles.h3_text}>Техническая поддержка</h3>
       <div className={styles.wrapper_help_btns}>
         <a href='http://google.com' target='_blank' className={styles.help_btn}>
-          <img style={{ width: 25 }} src={telegram} />
+          <img className={styles.img_icon} src={telegram} />
           <p className={styles.p_text}>Телеграмм</p>
         </a>
         <a href='mailto:support@blackmesait.ru' className={styles.help_btn}>
-          <img style={{ width: 25 }} src={email_green} />
+          <img className={styles.img_icon} src={email_green} />
           <p className={styles.p_text}>Почта</p>
         </a>
       </div>

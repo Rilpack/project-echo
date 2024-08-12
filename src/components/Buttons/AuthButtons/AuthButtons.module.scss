@@ -23,7 +23,21 @@
   cursor: pointer;
 }
 
+.img_icon {
+  width: 18px;
+}
+
 .btn_chapter {
   @include button-chapter;
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .img_icon {
+    width: 14px;
+  }
+
+  .btn_chapter {
+    font-size: 16px;
+  }
 }

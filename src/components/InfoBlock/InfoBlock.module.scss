@@ -28,3 +28,15 @@
     gap: 12px;
   }
 }
+
+@media (max-width: 768px) {
+  .h2_style {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 12px;
+  }
+
+  .container_info_forms {
+    gap: 8px;
+  }
+}

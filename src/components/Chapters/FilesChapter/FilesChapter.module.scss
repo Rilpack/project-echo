@@ -23,6 +23,9 @@
 }
 
 .cellText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: $table-cell-text;
   font-size: 14px;
 }
@@ -31,13 +34,60 @@
   user-select: none;
 }
 
-.button_download {
-  @include button;
-  font-weight: 600;
+.btn_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-.btn_open_form {
+.button_download_icon {
+  @include button;
+  display: flex;
+  padding: 6px;
+
+  .img_icon {
+    width: 20px;
+  }
+}
+
+.btn_upload {
   @include button;
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.btn_upload_icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .btn_upload {
+    display: none;
+  }
+
+  .btn_upload_icon {
+    @include button;
+    display: flex;
+    padding: 8px;
+    .img_icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+    }
+  }
+
+  .h3_text {
+    font-size: 16px;
+  }
+
+  .cellText {
+    font-size: 12px;
+    padding: 0px !important;
+  }
+
+  .headerText {
+    font-size: 14px;
+  }
 }

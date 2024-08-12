@@ -32,7 +32,26 @@
   user-select: none;
 }
 
+.img_icon {
+  width: 25px;
+}
+
 .p_text {
   @include p-text;
   font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .h3_text {
+    font-size: 16px;
+  }
+
+  .img_icon {
+    width: 20px;
+  }
+
+  .p_text {
+    @include p-text;
+    font-size: 14px;
+  }
 }

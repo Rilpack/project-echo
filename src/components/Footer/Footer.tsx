@@ -12,15 +12,15 @@ export const Footer = () => {
           <h2 className={styles.h2_text}>Контакты</h2>
           <div className={styles.detail_wrapper_footer}>
             <div className={styles.contact_container}>
-              <img style={{ width: 22 }} src={web} />
+              <img className={styles.img_contact} src={web} />
               <a className={styles.text} href='https://blackmesait.ru/' target='_blank'>https://blackmesait.ru</a>
             </div>
             <div className={styles.contact_container}>
-              <img style={{ width: 22 }} src={email} />
+              <img className={styles.img_contact} src={email} />
               <a className={styles.text} href='mailto:support@blackmesait.ru'>support@blackmesait.ru</a>
             </div>
             <div className={styles.contact_container}>
-              <img style={{ width: 22 }} src={phone} />
+              <img className={styles.img_contact} src={phone} />
               <a href='tel:+7 (913)-500-00-55' className={styles.text}>+7 (913) 500 00 55</a>
             </div>
           </div>

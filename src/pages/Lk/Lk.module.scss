@@ -49,3 +49,18 @@
     margin-bottom: 8px;
   }
 }
+
+@media (max-width: 768px) {
+  .lk_container {
+    padding-top: 8px;
+  }
+
+  .wrapper_lk {
+    gap: 16px;
+  }
+
+  .h2_text {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+}

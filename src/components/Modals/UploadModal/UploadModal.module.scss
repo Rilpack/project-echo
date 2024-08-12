@@ -93,3 +93,22 @@
   background-color: $form-background;
   padding: 10px 10px 10px 10px;
 }
+
+@media (max-width: 768px) {
+  .container_modal {
+    width: 300px;
+  }
+
+  .wrapper_content_modal {
+    gap: 4px;
+  }
+
+  .button_style {
+    font-size: 14px;
+  }
+
+  .button_accept_style {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}

@@ -22,6 +22,11 @@
   width: 100%;
 }
 
+.img_close {
+  width: 25px;
+  cursor: pointer;
+}
+
 .wrapper_block {
   position: relative;
   display: flex;
@@ -42,6 +47,7 @@
 
 .logo_modal {
   animation: rotate 3s linear infinite;
+  width: 200px;
   margin-bottom: 65px;
 }
 
@@ -60,4 +66,34 @@
   font-weight: 600;
   width: 100%;
   max-width: 500px;
+}
+
+@media (max-width: 768px) {
+  .container_modal {
+    width: 275px;
+    height: 300px;
+  }
+
+  .img_close {
+    width: 20px;
+  }
+
+  .wrapper_block {
+    margin-top: 0px;
+  }
+
+  .title_modal {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+
+  .logo_modal {
+    width: 115px;
+    margin-bottom: 24px;
+  }
+
+  .btn_modal {
+    font-size: 16px;
+    width: 100%;
+  }
 }

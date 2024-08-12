@@ -111,3 +111,25 @@
     margin-bottom: 18px;
   }
 }
+
+@media (max-width: 768px) {
+  .container_layout {
+    margin: 12px 18px 0px 18px;
+  }
+
+  .header_layout {
+    height: 75px;
+  }
+
+  .footer_layout {
+    height: 175px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .footer_layout {
+    height: 275px;
+  }
+}

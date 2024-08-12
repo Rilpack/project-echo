@@ -47,3 +47,15 @@
 .buttonTab_default:hover {
   color: $btn-default-hover;
 }
+
+@media (max-width: 768px) {
+  .tabs_container {
+    gap: 4px;
+  }
+
+  .buttonTab_default,
+  .buttonTab_active {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
