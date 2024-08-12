@@ -32,3 +32,20 @@
 
   user-select: none;
 }
+
+@media (max-width: 1024px) {
+  .lk_container {
+    gap: 4px;
+    padding-top: 16px;
+  }
+
+  .wrapper_lk {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .h2_text {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+}

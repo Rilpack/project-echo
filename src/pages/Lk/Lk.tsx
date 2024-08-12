@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import styles from './Lk.module.scss'
 import { ModalContext } from '../../App'
@@ -6,6 +6,7 @@ import { AuthButtons } from '../../components/Buttons/AuthButtons/AuthButtons'
 import { Chapters } from '../../interfaces/chapter'
 import { ChaptersForm } from '../../components/Forms/ChaptersForm/ChaptersForm'
 import { UploadModal } from '../../components/Modals/UploadModal/UploadModal'
+import { useNavigate } from 'react-router-dom'
 
 export const Lk = () => {
   // Context
@@ -16,8 +17,15 @@ export const Lk = () => {
   // Context
 
   const { user } = context;
+  const navigate = useNavigate();
   const [chapter, setChapter] = useState<Chapters | undefined>(Chapters.Files);
   const [showModal, setShowModal] = useState<boolean>(false);
+
+  useEffect(() => {
+    if (user === null) {
+      navigate('/')
+    }
+  }, [user])
 
   return (
     <div className={styles.block_page_container}>

@@ -12,3 +12,9 @@
   height: 100%;
   padding-left: 75px;
 }
+
+@media (max-width: 1024px) {
+  .container_chapter_form {
+    padding-left: 0px;
+  }
+}
