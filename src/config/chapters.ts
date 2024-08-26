@@ -1,4 +1,4 @@
-import table from '../assets/images/svg/table.svg';
+import files from '../assets/images/svg/files.svg';
 import settings from '../assets/images/svg/settings.svg';
 import help from '../assets/images/svg/help.svg';
 import logout from '../assets/images/svg/logout.svg';
@@ -6,7 +6,7 @@ import { Chapters } from '../interfaces/chapter';
 
 export const chapters = [
   {
-    icon: table,
+    icon: files,
     title: 'Мои файлы',
     slug: Chapters.Files,
   },

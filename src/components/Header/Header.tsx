@@ -59,9 +59,7 @@ export const Header = () => {
           </button>
           <button
             className={styles.button_style_mobile}
-            onClick={user === null
-              ? () => setActiveModal("auth")
-              : () => navigate('/lk')}>
+            onClick={() => setActiveModal("menu")}>
             <img className={styles.img} src={list} />
           </button>
         </div>

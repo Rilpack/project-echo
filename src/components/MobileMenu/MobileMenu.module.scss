@@ -1,0 +1,48 @@
+@import '@/assets/styles/_variables';
+@import '@/assets/styles/containers';
+@import '@/assets/styles/elements';
+@import '@/assets/styles/texts';
+
+.container_mobile_menu {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
+
+.container_chapters {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.chapter_block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.chapter_img {
+  width: 20px;
+}
+
+.chapter_text {
+  font-size: 18px;
+
+  transition: 0.1s linear;
+  cursor: pointer;
+  user-select: none;
+}
+
+.chapter_text:hover {
+  color: $btn-default-hover;
+}
