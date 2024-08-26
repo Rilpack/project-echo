@@ -1,6 +1,6 @@
 import styles from './Header.module.scss'
 import logo from '../../assets/images/svg/logo.svg'
-import profile from '../../assets/images/svg/user.svg'
+import list from '../../assets/images/svg/list.svg'
 import { useNavigate } from "react-router-dom";
 import { useContext } from 'react';
 import { ModalContext } from '../../App';
@@ -62,7 +62,7 @@ export const Header = () => {
             onClick={user === null
               ? () => setActiveModal("auth")
               : () => navigate('/lk')}>
-            <img className={styles.img} src={profile} />
+            <img className={styles.img} src={list} />
           </button>
         </div>
       </div>

@@ -95,23 +95,31 @@
   display: none;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .logo {
     width: 42px;
   }
 
   .logo_text {
-    font-size: 28px;
+    font-size: 26px;
+  }
+
+  .header_block_btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4px;
+  }
+
+  .btn_header {
+    font-size: 18px;
   }
 }
 
-@media (max-width: 768px) {
-  .logo {
-    width: 28px;
-  }
-
-  .logo_text {
-    font-size: 24px;
+@media (max-width: 1020px) {
+  .header_block_btns_container {
+    display: none;
   }
 
   .button_style {
@@ -128,5 +136,15 @@
     .img {
       width: 24px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 28px;
+  }
+
+  .logo_text {
+    font-size: 24px;
   }
 }
