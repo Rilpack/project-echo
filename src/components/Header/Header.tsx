@@ -14,8 +14,22 @@ export const Header = () => {
   // Context
 
   const { user, setActiveModal } = context;
-
   const navigate = useNavigate();
+
+  const btnsHeader = [
+    {
+      text: "Мои файлы",
+      action: user === null ? () => setActiveModal("auth") : () => navigate('/lk')
+    },
+    {
+      text: "Загрузить файл",
+      action: () => navigate('/download')
+    },
+    {
+      text: "Тарифы",
+      action: () => navigate('/tariffs')
+    },
+  ]
 
   return (
     <div className={styles.header_layout}>
@@ -24,6 +38,15 @@ export const Header = () => {
           <img className={styles.logo} src={logo} />
           <div className={styles.header_logo_blocK_text}>
             <h1 className={styles.logo_text}>BMIT ECHO</h1>
+          </div>
+        </div>
+        <div className={styles.header_block_btns_container}>
+          <div className={styles.header_block_btns}>
+            {btnsHeader.map((button, index) => (
+              <button className={styles.btn_header} key={index} onClick={button.action}>
+                {button.text}
+              </button>
+            ))}
           </div>
         </div>
         <div className={styles.header_block_btn_lk}>
