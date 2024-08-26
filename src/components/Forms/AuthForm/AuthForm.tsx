@@ -1,7 +1,6 @@
 import { useContext } from 'react';
 import styles from './AuthForm.module.scss'
 import { ModalContext } from '../../../App';
-import { useNavigate } from 'react-router-dom';
 
 export const AuthForm = () => {
   // Context
@@ -12,7 +11,6 @@ export const AuthForm = () => {
   // Context
 
   const { setUser, setActiveModal } = context;
-  const navigate = useNavigate();
 
   return (
     <div className={styles.auth_form_container}>
@@ -34,7 +32,14 @@ export const AuthForm = () => {
           placeholder='Введите пароль'
         />
       </div>
-      <button onClick={() => { setUser({ name: "Владимир", email: "example@gmail.com" }); setActiveModal(false); navigate('/lk') }} className={styles.button_style}>Войти</button>
+      <button
+        onClick={() => {
+          setUser({ name: "Владимир", email: "example@gmail.com" });
+          setActiveModal(false);
+        }}
+        className={styles.button_style}>
+        Войти
+      </button>
     </div>
   )
 }

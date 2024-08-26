@@ -7,6 +7,7 @@ import logo from '../../assets/images/svg/combo-logo.svg'
 import files from '../../assets/images/svg/files.svg';
 import upload from '../../assets/images/svg/upload.svg';
 import tariffs from '../../assets/images/svg/tariffs.svg';
+import login from '../../assets/images/svg/login.svg'
 import logout from '../../assets/images/svg/logout.svg';
 
 interface IMobileMenu {
@@ -28,12 +29,12 @@ export const MobileMenu = ({ onClose }: IMobileMenu) => {
     {
       icon: upload,
       title: 'Загрузить файл',
-      action: () => { navigate('/download'); onClose() },
+      action: user === null ? () => { setActiveModal("auth") } : () => { navigate('/download'); onClose() },
       isAuth: false
     },
     {
-      icon: files,
-      title: 'Мои файлы',
+      icon: user === null ? login : files,
+      title: user === null ? 'Войти' : 'Мои файлы',
       action: user === null ? () => { setActiveModal("auth") } : () => { navigate('/lk'); onClose() },
       isAuth: false
     },
