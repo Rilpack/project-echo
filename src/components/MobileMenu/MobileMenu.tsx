@@ -28,25 +28,28 @@ export const MobileMenu = ({ onClose }: IMobileMenu) => {
     {
       icon: upload,
       title: 'Загрузить файл',
-      action: () => { navigate('/download'); onClose() }
+      action: () => { navigate('/download'); onClose() },
+      isAuth: false
     },
     {
       icon: files,
       title: 'Мои файлы',
-      action: user === null ? () => { setActiveModal("auth") } : () => { navigate('/lk'); onClose() }
+      action: user === null ? () => { setActiveModal("auth") } : () => { navigate('/lk'); onClose() },
+      isAuth: false
     },
     {
       icon: tariffs,
       title: 'Тарифы',
-      action: () => { navigate('/tariffs'); onClose() }
+      action: () => { navigate('/tariffs'); onClose() },
+      isAuth: false
     },
     {
       icon: logout,
       title: 'Выход',
-      action: () => { onClose() }
+      action: () => { onClose() },
+      isAuth: true
     },
   ];
-
 
   return (
     <div className={styles.container_chapter}>
@@ -56,10 +59,14 @@ export const MobileMenu = ({ onClose }: IMobileMenu) => {
           {chaptersMobileMenu.map((chapter, index) => {
             return (
               <div
+                key={index}
                 onClick={chapter.action}
                 style={index === 0 ? { marginBottom: 12 } : undefined}
-                className={styles.chapter_block}
-                key={index}
+                className={!chapter.isAuth
+                  ? styles.chapter_block_auth
+                  : (chapter.isAuth && user !== null)
+                    ? styles.chapter_block_auth
+                    : styles.chapter_block}
               >
                 <img className={styles.chapter_img} src={chapter.icon} />
                 <span className={styles.chapter_text}>{chapter.title}</span>
