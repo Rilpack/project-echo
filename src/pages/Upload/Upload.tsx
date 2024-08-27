@@ -1,8 +1,9 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ExampleForm } from '../../components/Forms/ExampleForm/ExampleForm'
 import { UploadForm } from '../../components/Forms/UploadForm/UploadForm'
 import styles from './Upload.module.scss'
 import { ModalContext } from '../../App';
+import { useNavigate } from 'react-router-dom';
 
 export const Upload = () => {
   // Context
@@ -12,7 +13,14 @@ export const Upload = () => {
   }
   // Context
 
-  const { setActiveModal } = context;
+  const { user, setActiveModal } = context;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (user === null) {
+      navigate('/')
+    }
+  }, [user])
 
   return (
     <div className={styles.block_page_container} style={{ justifyContent: 'flex-start' }}>
