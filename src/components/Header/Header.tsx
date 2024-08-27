@@ -23,7 +23,7 @@ export const Header = () => {
     },
     {
       text: "Загрузить файл",
-      action: () => navigate('/download')
+      action: user === null ? () => setActiveModal("auth") : () => navigate('/upload')
     },
     {
       text: "Тарифы",

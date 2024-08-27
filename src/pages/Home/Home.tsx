@@ -1,23 +1,10 @@
 
 import styles from './Home.module.scss'
 import logo_3d from '../../assets/images/png/3d-logo.png'
-import { UploadForm } from '../../components/Forms/UploadForm/UploadForm'
-import { ExampleForm } from '../../components/Forms/ExampleForm/ExampleForm'
 import { InfoBlock } from '../../components/InfoBlock/InfoBlock'
 import { FaqBlock } from '../../components/FaqBlock/FaqBlock'
-import { useContext } from 'react'
-import { ModalContext } from '../../App'
 
 export const Home = () => {
-  // Context
-  const context = useContext(ModalContext);
-  if (!context) {
-    throw new Error('ModalContext must be used within a ModalProvider');
-  }
-  // Context
-
-  const { setActiveModal } = context;
-
   return (
     <div className={styles.block_page_container}>
       <div className={styles.home_page_container}>
@@ -26,13 +13,6 @@ export const Home = () => {
           <div className={styles.title_home_text_container}>
             <h2 className={styles.title_home_text}>Расшифрую любые аудио и видео файлы в текст</h2>
             <p className={styles.title_home_text_p}>Разделю текст на спикеров, расставлю таймкоды и знаки препинания​</p>
-          </div>
-        </div>
-        <div className={styles.wrapper_forms}>
-          <UploadForm setActiveModal={() => setActiveModal("success")} />
-          <div className={styles.form_example_container}>
-            <span className={styles.title_home_text_span}>Пример расшифровки</span>
-            <ExampleForm />
           </div>
         </div>
         <InfoBlock />

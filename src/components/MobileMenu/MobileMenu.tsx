@@ -29,7 +29,7 @@ export const MobileMenu = ({ onClose }: IMobileMenu) => {
     {
       icon: upload,
       title: 'Загрузить файл',
-      action: user === null ? () => { setActiveModal("auth") } : () => { navigate('/download'); onClose() },
+      action: user === null ? () => { setActiveModal("auth") } : () => { navigate('/upload'); onClose() },
       isAuth: false
     },
     {

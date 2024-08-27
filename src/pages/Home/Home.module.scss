@@ -50,31 +50,6 @@
   color: $subtitle-color;
 }
 
-.title_home_text_span {
-  @include title-form;
-  font-size: 22px;
-
-  user-select: none;
-}
-
-.wrapper_forms {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
-  gap: 24px;
-  width: 100%;
-}
-
-.form_example_container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 640px;
-  gap: 6px;
-}
-
 @media (max-width: 1024px) {
   .home_page_container {
     gap: 16px;

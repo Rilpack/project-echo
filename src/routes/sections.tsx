@@ -4,6 +4,7 @@ import { Home } from "../pages/Home/Home";
 import { Tariffs } from "../pages/Tariffs/Tariffs";
 import { Lk } from "../pages/Lk/Lk";
 import { ErrorPage } from "../pages/ErrorPage/ErrorPage";
+import { Upload } from "../pages/Upload/Upload";
 
 export default function Router() {
   const routes = useRoutes([
@@ -15,6 +16,10 @@ export default function Router() {
     {
       path: '/tariffs',
       element: <MainLayout><Tariffs /></MainLayout>,
+    },
+    {
+      path: '/upload',
+      element: <MainLayout><Upload /></MainLayout>
     },
     {
       path: '/lk',
