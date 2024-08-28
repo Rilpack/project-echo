@@ -63,3 +63,11 @@ body::-webkit-scrollbar-thumb {
   outline: none !important;
 }
 /* Отключенный стили таблицы */
+
+/* Стиль тултипа */
+.css-ja5taz-MuiTooltip-tooltip {
+  background-color: #01161e !important;
+  color: #03ff67 !important;
+  border: 1px solid #03ff67 !important;
+}
+/* Стиль тултипа */

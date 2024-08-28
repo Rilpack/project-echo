@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import styles from './UploadForm.module.scss'
 import { Speakers } from '../../../interfaces/speakers';
 import { Languages } from '../../../interfaces/languages';
+import { Loader } from '../../Loader/Loader';
 
 interface IUploadForm {
   setActiveModal: () => void;
@@ -88,7 +89,7 @@ export const UploadForm = ({ setActiveModal }: IUploadForm) => {
         <p className={styles.text_style}>Нажимая кнопку "Отправить" вы соглашаетесь с <a style={{ color: '#2a83ff' }} href='/' target='_blank'>нашей политикой конфиденциальности</a></p>
 
         <button onClick={setActiveModal} className={styles.button_accept_style}>
-          Отправить
+          {false ? "Отправить" : <Loader width={20} height={20} style="dark" />}
         </button>
       </div>
 

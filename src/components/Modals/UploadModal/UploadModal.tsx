@@ -3,6 +3,7 @@ import close from '../../../assets/images/svg/close.svg'
 import { useRef, useState } from 'react';
 import { Speakers } from '../../../interfaces/speakers';
 import { Languages } from '../../../interfaces/languages';
+import { Loader } from '../../Loader/Loader';
 
 interface IUploadModal {
   onClose: () => void
@@ -91,7 +92,7 @@ export const UploadModal = ({ onClose }: IUploadModal) => {
             </div>
 
             <button onClick={onClose} className={styles.button_accept_style}>
-              Отправить
+              {false ? "Отправить" : <Loader width={20} height={20} style="dark" />}
             </button>
 
           </div>

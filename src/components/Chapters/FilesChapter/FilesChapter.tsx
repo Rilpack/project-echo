@@ -5,6 +5,8 @@ import download from '../../../assets/images/svg/download.svg'
 import upload from '../../../assets/images/svg/upload.svg'
 import { rows } from "../../../config/exampleRows";
 import { useEffect, useState } from "react";
+import { Loader } from "../../Loader/Loader";
+import { Tooltip } from "@mui/material";
 
 interface IFilesChapter {
   showModal: () => void
@@ -36,9 +38,15 @@ export const FilesChapter = ({ showModal }: IFilesChapter) => {
       filterable: false,
       headerClassName: styles.headerText,
       cellClassName: styles.cellText,
-      renderCell: () => (<div className={styles.btn_container}>
-        <button className={styles.button_download_icon}><img className={styles.img_icon} src={download} /></button>
-      </div>)
+      renderCell: (params) => ((params.id === 1 || params.id === 2)
+        ? <Loader width={20} height={20} style="light" />
+        : <Tooltip title="Скачать" placement='left'>
+          <div className={styles.btn_container}>
+            <button className={styles.button_download_icon}>
+              <img className={styles.img_icon} src={download} />
+            </button>
+          </div>
+        </Tooltip>)
     },
     {
       field: 'name',
