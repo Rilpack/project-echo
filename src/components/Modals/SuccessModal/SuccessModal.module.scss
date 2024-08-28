@@ -40,15 +40,15 @@
 
 .title_modal {
   text-align: center;
-  font-size: 28px;
+  font-size: 20px;
   max-width: 500px;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 .logo_modal {
   animation: rotate 3s linear infinite;
   width: 200px;
-  margin-bottom: 65px;
+  margin-bottom: 42px;
 }
 
 @keyframes rotate {
@@ -83,17 +83,17 @@
   }
 
   .title_modal {
-    font-size: 18px;
+    font-size: 14px;
     margin-bottom: 16px;
   }
 
   .logo_modal {
-    width: 115px;
-    margin-bottom: 24px;
+    width: 100px;
+    margin-bottom: 18px;
   }
 
   .btn_modal {
-    font-size: 16px;
+    font-size: 14px;
     width: 100%;
   }
 }
